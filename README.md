@@ -1,12 +1,12 @@
-# Go Chase It! - Udacity - Robotics Software Engineer Nanodegree Program - Project Two
+## Go Chase It! - Udacity - Robotics Software Engineer Nanodegree Program - Project Two
 
-## Demo Videos
+### Demo Videos
 
 | 👉 [Go Chase It](https://www.youtube.com/watch?v=Tim4MBVdvsw) |
 | ------------------------------------------------------------ |
 | [![Go Chase It Demo](https://github.com/nullbyte91/go_chase_it_mobile_robot/blob/master/image/demo.png)](https://www.youtube.com/watch?v=Tim4MBVdvsw) |
 
-## 🗃 Project structure
+### 🗃 Project structure
 
 ```python
 .
@@ -47,7 +47,7 @@
 │       └── UdacityOffice.world
 └── README.md
 ```
-## 🖖 Quick Start
+### 🖖 Quick Start
 ```
 mkdir -p catkin_ws/src && pushd catkin_ws/src
 git clone https://github.com/nullbyte91/go_chase_it_mobile_robot.git 
