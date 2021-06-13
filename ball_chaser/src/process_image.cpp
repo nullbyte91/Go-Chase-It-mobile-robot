@@ -25,13 +25,18 @@ void ProcessImage::process_image_callback(const sensor_msgs::Image img)
         if (red_channel == 255 && green_channel == 255 && blue_channel == 255) {
           auto pixel_val = i % img.step;
           if (pixel_val < img.step * 0.4) {
+            std::cout << "Left value: " << pixel_val << std::endl;
             side = LEFT;
           } else if (pixel_val > img.step * 0.6) {
+            std::cout << "RIGHT value: " << pixel_val << std::endl;
             side = RIGHT;
           } else {
+            std::cout << "FORWARD value: " << pixel_val << std::endl;
             side = FORWARD;
           }
           break;
+        } else {
+          side = NO_BALL;
         }
     }
 
@@ -42,7 +47,7 @@ void ProcessImage::process_image_callback(const sensor_msgs::Image img)
       drive_robot(0.5, -1.0);
     } else if (side == FORWARD) {
       drive_robot(0.5, 0.0);
-    } else /* NO_BALL */ {
+    } else if (side = NO_BALL) {
       drive_robot(0.0, 0.0);
     }
 }
